@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import store from "./src/component/redux/store";
 import Cart from "./src/component/Cart";
 
+
 //lazyloading instamart page
 const Instamart=lazy(()=>import("./src/component/Instamart"));
 
@@ -72,6 +73,7 @@ const appRouter=createBrowserRouter([
                 path:"/cart",
                 element:<Cart/>,
             },
+           
         ]
 
     },

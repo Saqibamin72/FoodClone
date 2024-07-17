@@ -1,7 +1,7 @@
 import { useSelector,useDispatch } from "react-redux";
-import CartItem from "./CartItem";
+import FoodItem from "./FoodItem"
 import { clearCart, removeItem } from "./redux/cartSlice";
-import { BiRestaurant } from "react-icons/bi";
+
 
 const Cart = () => {
     const cartItems = useSelector((store) => store.cart.items);
@@ -24,7 +24,7 @@ const Cart = () => {
 
 
                 {cartItems.map((food) => (
-                    <CartItem
+                    <FoodItem
                         key={food.id}
                         id={food.id}
                         name={food.name}

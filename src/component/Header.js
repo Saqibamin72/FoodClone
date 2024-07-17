@@ -3,7 +3,8 @@ import { Link } from "react-router-dom"
 import useOnline from "./utils/useOnline"
 import UserContext from "./utils/UserContext";
 import { useSelector } from "react-redux";
-import store from "./redux/store";
+
+
 
 
 
@@ -12,9 +13,10 @@ const Header = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const isOnline = useOnline();
     const { user } = useContext(UserContext);
+
    
-    const cartItem=useSelector(store=>store.cart.items );
-    console.log(cartItem);
+    const cartItems=useSelector(store=>store.cart.items );
+
     return (
         <div className="bg-white p-4 shadow-md">
             <div className="container mx-auto flex items-center justify-between">
@@ -25,8 +27,9 @@ const Header = () => {
                     <li className="hover:text-red-500 transition-colors"><Link to="/">Home</Link></li>
                     <li className="hover:text-red-500 transition-colors"><Link to="/contact">Contact</Link></li>
                     <li className="hover:text-red-500 transition-colors"><Link to="/about">About Us</Link></li>
-                    <li className="hover:text-red-500 transition-colors"><Link to="/cart">Cart-{cartItem.length}</Link></li>
+                    <li className="hover:text-red-500 transition-colors"><Link to="/cart">Cart-{cartItems.length}</Link></li>
                     <li className="hover:text-red-500 transition-colors"><Link to="/instamart">Instamart</Link></li>
+                 
                 </ul>
                 <h1>{isOnline ? "🟢" : "🔴"}</h1>
                 <span className="bg-inherit text-red-500">{user.name}-{user.email}</span>

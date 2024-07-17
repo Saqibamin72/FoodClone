@@ -77,6 +77,7 @@ import { useDispatch, } from "react-redux";
 import { addItem } from "./redux/cartSlice";
 
 
+
 const RestaurantMenu = () => {
     const { id } = useParams();
     const restaurant=useRestaurant(id);
@@ -87,10 +88,11 @@ const RestaurantMenu = () => {
 
     const { img, price, name, desc, rating } = restaurant;
     
-    const dispatch=useDispatch()
-    const addFoodItem=()=>{
-        dispatch(addItem(restaurant))
-    }
+  const dispatch=useDispatch();
+  const handleItem=()=>{
+        dispatch(addItem(restaurant))   
+
+       }   
    
 
     return (
@@ -106,7 +108,7 @@ const RestaurantMenu = () => {
                 <AiFillStar className="mr-1" />
                 {rating}
               </div>
-              <button className= "mt-4 p-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-300" onClick={()=>addFoodItem()}>
+              <button className= "mt-4 p-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-300" onClick={()=>handleItem()}>
                 Add to cart
               </button>
             </div>
