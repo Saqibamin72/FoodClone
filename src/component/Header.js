@@ -51,7 +51,7 @@ const Header = () => {
 const Title = () => {
     return (
         <a href="/" className="flex items-center space-x-2">
-            <img src={Logo} alt="Logo" className="w-10 h-10 rounded-full object-cover" />
+            <img  data-testid="logo" src={Logo} alt="Logo" className="w-10 h-10 rounded-full object-cover" />
             <span className="text-xl font-bold">Food App</span>
         </a>
     );
