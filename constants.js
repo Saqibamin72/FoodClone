@@ -1,4 +1,4 @@
-
+export const Logo="https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj"
 const FoodData = [
   {
     id: 1,

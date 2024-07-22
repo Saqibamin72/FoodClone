@@ -13,7 +13,7 @@ const Cart = () => {
         dispatch(removeItem())
     }
 
-    return (
+    return (~
         <div className="flex flex-col items-center p-6">
             <h1 className="font-bold text-3xl bg-green-200 p-4 rounded-lg shadow-md mb-6">Cart - {cartItems.length}</h1>
             <button className="bg-green-100 "

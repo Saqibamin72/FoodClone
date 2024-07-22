@@ -13,6 +13,7 @@ import UserContext from "./src/component/utils/UserContext";
 import { Provider } from "react-redux";
 import store from "./src/component/redux/store";
 import Cart from "./src/component/Cart";
+import User from "./src/component/User";
 
 
 //lazyloading instamart page
@@ -73,7 +74,10 @@ const appRouter=createBrowserRouter([
                 path:"/cart",
                 element:<Cart/>,
             },
-           
+            {
+                path:"/user",
+                element:<User/>,
+            },
         ]
 
     },

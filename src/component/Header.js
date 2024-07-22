@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import useOnline from "./utils/useOnline"
 import UserContext from "./utils/UserContext";
 import { useSelector } from "react-redux";
+import { Logo } from "../../constants";
 
 
 
@@ -29,6 +30,8 @@ const Header = () => {
                     <li className="hover:text-red-500 transition-colors"><Link to="/about">About Us</Link></li>
                     <li className="hover:text-red-500 transition-colors"><Link to="/cart">Cart-{cartItems.length}</Link></li>
                     <li className="hover:text-red-500 transition-colors"><Link to="/instamart">Instamart</Link></li>
+                    <li className="hover:text-red-500 transition-colors"><Link to="/user">User</Link></li>
+
                  
                 </ul>
                 <h1>{isOnline ? "🟢" : "🔴"}</h1>
@@ -48,7 +51,7 @@ const Header = () => {
 const Title = () => {
     return (
         <a href="/" className="flex items-center space-x-2">
-            <img src="https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj" alt="Logo" className="w-10 h-10 rounded-full object-cover" />
+            <img src={Logo} alt="Logo" className="w-10 h-10 rounded-full object-cover" />
             <span className="text-xl font-bold">Food App</span>
         </a>
     );
