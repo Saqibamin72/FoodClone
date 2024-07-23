@@ -30,6 +30,7 @@ import { Link } from "react-router-dom";
         <>
         <div>
             <input type="text"
+             data-testId="search-input"
              name="search"
              placeholder="Search Here"
              value={searchText}
@@ -63,7 +64,7 @@ import { Link } from "react-router-dom";
             
         </div>
       <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-testId="resLists">
               {
                  filteredRestaurants.map((food) => (
                     <Link to={"/restaurant/" +food.id } key={food.id}  >  <FoodCard 

@@ -28,13 +28,13 @@ const Header = () => {
                     <li className="hover:text-red-500 transition-colors"><Link to="/">Home</Link></li>
                     <li className="hover:text-red-500 transition-colors"><Link to="/contact">Contact</Link></li>
                     <li className="hover:text-red-500 transition-colors"><Link to="/about">About Us</Link></li>
-                    <li className="hover:text-red-500 transition-colors"><Link to="/cart">Cart-{cartItems.length}</Link></li>
+                    <li className="hover:text-red-500 transition-colors"><Link to="/cart" data-testId="cart">Cart-{cartItems.length}</Link></li>
                     <li className="hover:text-red-500 transition-colors"><Link to="/instamart">Instamart</Link></li>
                     <li className="hover:text-red-500 transition-colors"><Link to="/user">User</Link></li>
 
                  
                 </ul>
-                <h1>{isOnline ? "🟢" : "🔴"}</h1>
+                <h1 data-testId="online-status">{isOnline ? "🟢" : "🔴"}</h1>
                 <span className="bg-inherit text-red-500">{user.name}-{user.email}</span>
 
                 {isLoggedIn ?

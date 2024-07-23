@@ -26512,6 +26512,7 @@ const Header = ()=>{
                             className: "hover:text-red-500 transition-colors",
                             children: /*#__PURE__*/ (0, _jsxRuntime.jsxs)(_reactRouterDom.Link, {
                                 to: "/cart",
+                                "data-testId": "cart",
                                 children: [
                                     "Cart-",
                                     cartItems.length
@@ -26535,6 +26536,7 @@ const Header = ()=>{
                     ]
                 }),
                 /*#__PURE__*/ (0, _jsxRuntime.jsx)("h1", {
+                    "data-testId": "online-status",
                     children: isOnline ? "\uD83D\uDFE2" : "\uD83D\uDD34"
                 }),
                 /*#__PURE__*/ (0, _jsxRuntime.jsxs)("span", {
@@ -35718,6 +35720,7 @@ const Body = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxRuntime.jsx)("input", {
                         type: "text",
+                        "data-testId": "search-input",
                         name: "search",
                         placeholder: "Search Here",
                         value: searchText,
@@ -35747,6 +35750,7 @@ const Body = ()=>{
                 className: "container mx-auto px-4 py-8",
                 children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
                     className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4",
+                    "data-testId": "resLists",
                     children: filteredRestaurants.map((food)=>/*#__PURE__*/ (0, _jsxRuntime.jsxs)(_reactRouterDom.Link, {
                             to: "/restaurant/" + food.id,
                             children: [
@@ -54753,6 +54757,7 @@ var _jsxRuntime = require("4c3c44d88f1f260e");
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
         className: "grid grid-cols-3 gap-4 p-4",
+        "data-testId": "shimmer",
         children: Array(9).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
                 className: "Shimmer-card bg-gray-300 h-40 animate-pulse rounded-md"
             }, index))
