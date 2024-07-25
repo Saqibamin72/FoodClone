@@ -51,9 +51,10 @@ import { Link } from "react-router-dom";
             />
   
             
-            <button onClick={()=>{
+            <button data-testId="search-btn" onClick={()=>{
                 const data=filterData(searchText,allRestaurants)
                 setFilteredRestaurants(data)
+                
             
                     
  }
@@ -64,7 +65,7 @@ import { Link } from "react-router-dom";
             
         </div>
       <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-testId="resLists">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-testId="resList">
               {
                  filteredRestaurants.map((food) => (
                     <Link to={"/restaurant/" +food.id } key={food.id}  >  <FoodCard 

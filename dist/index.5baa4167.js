@@ -35737,6 +35737,7 @@ const Body = ()=>{
                         className: "px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     }),
                     /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
+                        "data-testId": "search-btn",
                         onClick: ()=>{
                             const data = filterData(searchText, allRestaurants);
                             setFilteredRestaurants(data);
@@ -35750,7 +35751,7 @@ const Body = ()=>{
                 className: "container mx-auto px-4 py-8",
                 children: /*#__PURE__*/ (0, _jsxRuntime.jsx)("div", {
                     className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4",
-                    "data-testId": "resLists",
+                    "data-testId": "resList",
                     children: filteredRestaurants.map((food)=>/*#__PURE__*/ (0, _jsxRuntime.jsxs)(_reactRouterDom.Link, {
                             to: "/restaurant/" + food.id,
                             children: [
@@ -55015,6 +55016,7 @@ const RestaurantMenu = ()=>{
                                 ]
                             }),
                             /*#__PURE__*/ (0, _jsxRuntime.jsx)("button", {
+                                "data-testId": "addMenu-btn",
                                 className: "mt-4 p-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-300",
                                 onClick: ()=>handleItem(),
                                 children: "Add to cart"

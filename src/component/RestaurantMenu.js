@@ -108,7 +108,7 @@ const RestaurantMenu = () => {
                 <AiFillStar className="mr-1" />
                 {rating}
               </div>
-              <button className= "mt-4 p-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-300" onClick={()=>handleItem()}>
+              <button   data-testId="addMenu-btn" className= "mt-4 p-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-300" onClick={()=>handleItem()}>
                 Add to cart
               </button>
             </div>
